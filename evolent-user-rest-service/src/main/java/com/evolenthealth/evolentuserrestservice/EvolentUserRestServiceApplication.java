@@ -8,6 +8,7 @@ public class EvolentUserRestServiceApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(EvolentUserRestServiceApplication.class, args);
+		
 	}
 
 }
