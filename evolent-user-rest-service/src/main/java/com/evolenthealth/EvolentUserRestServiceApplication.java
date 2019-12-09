@@ -1,4 +1,4 @@
-package com.evolenthealth.evolentuserrestservice;
+package com.evolenthealth;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,7 +8,6 @@ public class EvolentUserRestServiceApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(EvolentUserRestServiceApplication.class, args);
-		
 	}
 
 }
