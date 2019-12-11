@@ -1,0 +1,37 @@
+<div  *ngIf="users.length == 0">
+      <h3>No User available. Please add user using Add link.</h3>
+</div>
+<div *ngIf="isDeletd == true">
+  <label> {{deletedUser}} details deleted successfully.</label>
+</div>
+
+<div class="panel panel-primary" *ngIf="users.length != 0">
+    <div class="panel-heading">
+      <h2>User List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td>{{user.firstName}}</td>
+            <td>{{user.lastName}}</td>
+            <td>{{user.emailId}}</td>
+            <td><button (click)="deleteUser(user.id,user)" class="btn btn-danger">Delete</button>
+                <button (click)="updateUser(user.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
+                <button (click)="userDetails(user.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  

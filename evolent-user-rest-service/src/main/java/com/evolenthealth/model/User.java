@@ -1,17 +1,35 @@
 package com.evolenthealth.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class User {
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	private String firstName;
 	private String lastName;
 	private String emailId;
 	private long mobileNumber;
+	private String status;
+	
+	
+	/**
+	 * @return the status
+	 */
+	public String getStatus() {
+		return status;
+	}
+	/**
+	 * @param status the status to set
+	 */
+	public void setStatus(String status) {
+		this.status = status;
+	}
 	/**
 	 * @return the id
 	 */

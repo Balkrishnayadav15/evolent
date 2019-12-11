@@ -8,4 +8,5 @@ import com.evolenthealth.model.User;
 @Repository
 public interface UserDetailsRepository extends JpaRepository<User,Long> {
 
+	public User findByEmailId(String emailId);
 }

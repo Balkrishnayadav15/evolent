@@ -1,0 +1,51 @@
+<h3>Update User Information</h3>
+<div [hidden]="!isError" class="alert alert-danger" role="alert">
+  {{errorMessage}}
+</div> 
+  <div style="width: 400px;">
+                <form [formGroup]="updateUserForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                        <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                            <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                            <div *ngIf="f.firstName.errors.maxlength">First Name should be less than 50 characters only</div>
+                            <div *ngIf="f.firstName.errors.pattern">First Name only contains alphabets</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+                        <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                            <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+                            <div *ngIf="f.lastName.errors.maxlength">Last Name should be less than 50 characters only</div>
+                            <div *ngIf="f.lastName.errors.pattern">Last Name only contains alphabets</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="text" formControlName="emailId" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.emailId.errors }" />
+                        <div *ngIf="submitted && f.emailId.errors" class="invalid-feedback">
+                            <div *ngIf="f.emailId.errors.required">Email is required</div>
+                            <div *ngIf="f.emailId.errors.email">Email must be a valid email address</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Mobile Number</label>
+                        <input type="type" formControlName="mobileNumber" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.mobileNumber.errors}" />
+                        <div *ngIf="submitted && f.mobileNumber.errors" class="invalid-feedback">
+                            <div *ngIf="f.mobileNumber.errors.required">Mobile Number is required</div>
+                            <div *ngIf="f.mobileNumber.errors.minlength">Mobile Number must be at least 10 digits</div>
+                            <div *ngIf="f.mobileNumber.errors.pattern">Mobile Number must be a number</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                      <label>Status <input type="checkbox" formControlName="status"  (change)="updateStatus($event)"/>
+
+                      </label>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary">Update</button>
+                    </div>
+                </form>   
+</div>

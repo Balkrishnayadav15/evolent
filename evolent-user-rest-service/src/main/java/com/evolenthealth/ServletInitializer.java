@@ -1,4 +1,4 @@
-package com.evolenthealth.evolentuserrestservice;
+package com.evolenthealth;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
