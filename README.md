@@ -65,3 +65,12 @@ This application includes the following functionality with given validation.
 	c. Start the server "ng server -o"
 3. Hit the url in browser "http://localhost:4200". It will open the application.
 ```
+
+## Api's
+```bash
+Create User Api - evolent/api/v1/user
+Update User Api - evolent/api/v1/user/{id}
+Delete User Api - evolent/api/v1/user/{id}
+Get specific user details Api - evolent/api/v1/user/{id}
+Get All user Api - evolent/api/v1/user
+```
