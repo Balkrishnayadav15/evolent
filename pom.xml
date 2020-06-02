@@ -3,13 +3,13 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.evolenthealth</groupId>
-  <artifactId>evolent</artifactId>
+  <artifactId>virtualClass</artifactId>
   <version>1.0</version>
   <packaging>pom</packaging>
-  <name>evolent</name>
+  <name>virtualClass</name>
   <description>Evolent user management application</description>
   <modules>
-  	<module>evolent-user-rest-service</module>
+  	<module>vc-rest-service</module>
   </modules>
 	
 </project>
